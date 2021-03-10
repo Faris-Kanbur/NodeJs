@@ -16,7 +16,7 @@ var mail = {
     to: "faris35kanbur@gmail.com, Ali@gmail.com",
     subject: "NodeJS and mail",
     text:"I am sending my first mail with Node Js",
-    html:"<h1>HTML ile mail gönderildi",
+    html:"<h1>HTML ile mail gönderildi </h1>",
 };
 
 transfer.sendMail(mail, function(error){
