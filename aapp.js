@@ -1,5 +1,6 @@
 var http = require("http");
 var fs = require("fs");
+const { func } = require("prop-types");
 
 // http.createServer(function(req, res) {
 //     fs.readFile("page.html", function(error, data) {
@@ -24,8 +25,15 @@ var fs = require("fs");
 // }).listen(8083)
 
 
-http.createServer(function(req, res) {
-    fs.writeFile("newfile.txt", "This is my World Man Thank you to visit me", function(error){
-        console.log("add what i want  and changed");
+// http.createServer(function(req, res) {
+//     fs.writeFile("newfile.txt", "This is my World Man Thank you to visit me", function(error){
+//         console.log("add what i want  and changed");
+//     });
+// }).listen(8083);
+
+
+http.createServer(function(req, res){
+    fs.unlink("newfile.txt" , function(error) {
+        console.log("deleted");
     });
 }).listen(8083);
