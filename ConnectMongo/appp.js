@@ -16,9 +16,24 @@ MongoClient.connect(connection, {useNewUrlParser:true}, function(error, db) {
     //     db.close();
     // });
     
-    dbo.collection("müsteriler").find({}).sort({isim: -1}).toArray(function(err, result){ // tüm verileri cekmek icin
-        if (error) throw error;
-        console.log(result);
+    // dbo.collection("müsteriler").find({}).sort({isim: -1}).toArray(function(err, result){ // tüm verileri cekmek icin
+    // if (error) throw error;
+    //     console.log(result);
+    //     db.close();
+    
+    // });
+
+    dbo.collection("müsteriler").deleteOne({},function(err){ // bir tane veri silmek icin belli bir se icin de ( icine isim : faris gibi belirtebilriisn) 
+    if (error) throw error;
+        console.log("Silindi");
         db.close();
+    
+    });
+
+    dbo.collection("müsteriler").deleteOne({},function(err){ // tüm verileri silmek icin
+    if (error) throw error;
+        console.log("Silindi");
+        db.close(); 
+    
     });
 });
