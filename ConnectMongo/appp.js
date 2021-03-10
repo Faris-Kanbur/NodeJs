@@ -23,17 +23,28 @@ MongoClient.connect(connection, {useNewUrlParser:true}, function(error, db) {
     
     // });
 
-    dbo.collection("müsteriler").deleteOne({},function(err){ // bir tane veri silmek icin belli bir se icin de ( icine isim : faris gibi belirtebilriisn) 
-    if (error) throw error;
-        console.log("Silindi");
-        db.close();
+    // dbo.collection("müsteriler").deleteOne({},function(err){ // bir tane veri silmek icin belli bir se icin de ( icine isim : faris gibi belirtebilriisn) 
+    // if (error) throw error;
+    //     console.log("Silindi");
+    //     db.close();
     
-    });
+    // });
 
-    dbo.collection("müsteriler").deleteOne({},function(err){ // tüm verileri silmek icin
-    if (error) throw error;
-        console.log("Silindi");
+    // dbo.collection("müsteriler").deleteOne({},function(err){ // tüm verileri silmek icin
+    // if (error) throw error;
+    //     console.log("Silindi");
+    //     db.close(); 
+    
+    // });
+
+        var yenideger = {$set:{il:"Malatya"}}
+        dbo.collection("müsteriler").updateOne({isim: Faris},yenideger,function(err){ // verileri güncellemek icin
+        if (error) throw error;
+        console.log("Güncellendi");
         db.close(); 
     
     });
+
+
+
 });
