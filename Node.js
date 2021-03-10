@@ -1,7 +1,8 @@
-var http = require("http");
-var date = require("./mymodule");
+// var http = require("http");
+// var date = require("./mymodule");
 
-http.createServer(function (req, res) {
-    res.end("You can see your time here:" + date.myDateTime());
+// http.createServer(function (req, res) {
+//     res.end("You can see your time here:" + date.myDateTime());
     
-}).listen(8080);
+// }).listen(8080);
+
