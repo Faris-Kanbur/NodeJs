@@ -17,8 +17,15 @@ var fs = require("fs");
 //     }).listen("8083")
 
 
+// http.createServer(function(req, res) {
+//     fs.open("newfile", "w", function(error){   // to create or over write
+//         console.log("Created File")
+//     });
+// }).listen(8083)
+
+
 http.createServer(function(req, res) {
-    fs.open("newfile", "w", function(error){   // to create or over write
-        console.log("Created File")
+    fs.writeFile("newfile.txt", "This is my World Man Thank you to visit me", function(error){
+        console.log("add what i want  and changed");
     });
-}).listen(8083)
+}).listen(8083);
