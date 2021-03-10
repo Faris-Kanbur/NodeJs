@@ -1,6 +1,6 @@
 var http = require("http");
 var fs = require("fs");
-const { func } = require("prop-types");
+
 
 // http.createServer(function(req, res) {
 //     fs.readFile("page.html", function(error, data) {
