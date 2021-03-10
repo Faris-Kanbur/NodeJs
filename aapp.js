@@ -32,8 +32,15 @@ const { func } = require("prop-types");
 // }).listen(8083);
 
 
-http.createServer(function(req, res){
-    fs.unlink("newfile.txt" , function(error) {
-        console.log("deleted");
+// http.createServer(function(req, res){
+//     fs.unlink("newfile.txt" , function(error) {
+//         console.log("deleted");
+//     });
+// }).listen(8083);
+
+
+http.createServer(function(req, res) {
+    fs.rename("metin.txt", "orginal.txt", function(error){
+        console.log("name changed")
     });
 }).listen(8083);
